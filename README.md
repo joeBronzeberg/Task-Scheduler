@@ -44,8 +44,8 @@ The webpage also shows statistics for other scheduling algorithms like First-Com
   localhost:5000
   ```
   This will load the frontend interface where you can input task details and view scheduling statistics. 
-![img1](pics/webpageScreenshot1.png)
-![img2](pics/webpageScreenshot2.png)
+![img1](images/webpageScreenshot1.png)
+![img2](images/webpageScreenshot2.png)
 ## Working of the Project
 
   ### Task Input and Scheduling:
@@ -70,13 +70,6 @@ The webpage also shows statistics for other scheduling algorithms like First-Com
 
 ### Explanation of Ratio based Scheduler Algorithm
 The ratio-based scheduling algorithm aims to prioritize tasks based on a ratio calculated dynamically during execution. This ratio considers both the remaining burst time of a task and its waiting time (time spent waiting to be executed).
-#### When is Ratio based Algorithm better than SJF?
-##### Scenario 1: Preventing Starvation
-  - SJF Schedule: SJF can cause starvation for long tasks if short tasks keep arriving, as long tasks might never get executed.
-  - Ratio-Based Schedule: By factoring in the waiting time, the ratio-based algorithm can prevent starvation by gradually increasing the priority of longer-waiting tasks, ensuring they eventually get processed.
-##### Scenario 2: Mix of Long and Short Tasks
-  - SJF Schedule: In environments with a mix of long and short tasks, SJF might lead to longer average turnaround times for long tasks, as they are continuously preempted by shorter tasks.
-  - Ratio-Based Schedule: The ratio-based approach can better handle this mix by balancing the priority given to short and long tasks based on their waiting times, improving fairness and potentially reducing average waiting time for longer tasks.
 ### Learning Takeaways
 From this project, I learned:
   - How to integrate C++ code with a Node.js backend.
